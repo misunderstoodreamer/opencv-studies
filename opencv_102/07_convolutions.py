@@ -20,7 +20,7 @@ def convolve(image, kernel):
     # the problem of kernel's pixels that are not in the main image pixel
     # in this method replicate padding (mirror padding) applied
 
-    # padding is equal to width of the kernel minus 1 divided by 2
+    # padding is equal to width of the kernel minus 1 divided by 2 (e.g. if width = 5, padding is 2)
     pad = (kW - 1) // 2
 
     image = cv.copyMakeBorder(src=image, top=pad, bottom=pad, left=pad, right=pad, borderType=cv.BORDER_REPLICATE)
